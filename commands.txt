@@ -1,0 +1,9 @@
+docker build -t api . ----> build docker container
+docker run -it --rm -p 8080:8080 api ------> run docker container
+
+curl http://localhost:8080
+
+docker compose up -d --> create a container
+docker compose down ---> remove the container
+
+npx gitignore node --> create ignore file for node
