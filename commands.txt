@@ -5,5 +5,31 @@ curl http://localhost:8080
 
 docker compose up -d --> create a container
 docker compose down ---> remove the container
-
+docker compose up -d --build --> re build code
 npx gitignore node --> create ignore file for node
+
+
+Problem :- 
+
+Lets say you have hosted one server
+- U installed docker there, etc things
+- DID git pull
+- DID docker compose up -d
+- server started running
+- curl http://IP_ADDRESS:8080 works
+
+But now you have new pushes,
+here you push it onto github from local
+- on server again git pull
+- on server again rebuild docker compose up -d --build 
+
+This problem have been solved by github actions
+
+Steps :- 
+
+1. create .github folder
+2. inside create workflows folder 
+3. create deploy.yaml file
+
+Now, in that yaml files, you can have env variables used
+This env variables you can set from github Secrets & variables menu 
