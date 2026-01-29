@@ -19,7 +19,7 @@ jobs :
           host: 31.97.206.6
           username: root 
           key : ${{ secrets.SSH_PRIVATE_KEY }}
-        script : |
-          cd  root/nodejs-backend-github-actions
-          git pull 
-          docker compose up -d --build
+          script : |
+            cd  root/nodejs-backend-github-actions
+            git pull 
+            docker compose up -d --build
